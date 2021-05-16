@@ -81,7 +81,7 @@ router.put("/:id", async (request, response) => {
   try {
     const updateId = await knex("meals")
       .where({
-        id: request.params.id
+        id: Number(request.params.id)
       })
       .update(request.body)
     response.json(updateId)
