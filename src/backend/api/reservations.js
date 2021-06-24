@@ -13,10 +13,12 @@ router.get("/", async (request, response) => {
 });
 
 router.post("/", async (request, response) => {
+    console.log(request.body)
     try {
         // knex syntax for selecting things. Look up the documentation for knex for further info
         const insertNewReservation = await knex("reservations").insert(request.body);
         response.json(insertNewReservation);
+
     } catch (error) {
         throw error;
     }

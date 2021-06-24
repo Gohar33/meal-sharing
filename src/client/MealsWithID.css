@@ -1,0 +1,62 @@
+/* .form{
+
+width:40%;
+margin:20px;
+
+
+} */
+
+.form-wrapper{
+
+  width:100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+padding-top: 100px;
+background-color: #d1d0e0;
+}
+
+.form-button{
+    background-color: black;
+    border:black 1px solid;
+}
+
+.form-button:hover{
+    background-color: #d1d0e0;
+    color:black;
+    border:black 1px solid;
+}
+
+.back{
+    color:black;
+    font-size: 20px;
+}
+
+.meal-image{
+    width:100px;
+    height:100px;
+}
+
+/* .show-reservation-wrapper{
+    display:flex;
+    flex-direction:row;
+    background-color: #d1d0e0;
+} */
+
+.mealsWithId-form{
+    text-align: center;
+    width:100vw;
+    padding-top:50px;
+    background-color: #e7d6ec;
+    background-color: #ffffd1;
+   
+ 
+    border-bottom:solid 1px;
+}
+
+.reject-text{
+   text-align:end;
+   margin-top:50px;
+ 
+}

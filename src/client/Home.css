@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding:0; 
+    box-sizing:border-box;
+}
+body{
+    margin: 0 auto; 
+    font-family:'Roboto', sans-serif;
+    line-height:1.4;
+}
+
+.navBar{
+    width:100vw;
+    background-color: black;
+    z-index: 1;
+    position:fixed;
+    height:15%;
+}
+
+/* .navBar{
+    margin:auto;
+       background-color: #000000;
+       color:white;
+       display:flex;
+       flex-direction: row;
+       justify-content: space-evenly;
+       height:20%;
+       font-size: 25px;
+       top: 0;
+       z-index: 1;
+       width:100vw;
+       position:fixed;
+       
+     } */
+
+.navbar-light .navbar-brand{
+    color:#fff;
+    font-family: fantasy;
+    font-size:50px;
+    padding-left:30px;
+}
+
+.navbar-light .navbar-brand:hover{
+    color:#ffc5bf;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color:#fff;
+    font-size:25px;
+    padding-left:30px;
+ 
+   
+}
+
+.navbar-light .navbar-nav {
+   
+    margin-left:60%;
+}
+
+
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color:#E8CED8;
+    color:#ffc5bf;
+}
+
+.navbar-light .navbar-nav .nav-link:before{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color:#ffc5bf;
+    position: absolute;
+    top: 80px;
+    width: 0%;
+    transition: all ease-in-out 230ms;
+    }
+    .navbar-light .navbar-nav .nav-link:hover:before{
+        width: 6%;
+    }
+
+
+  .toggle{
+    background-color:white !important;
+  }
+
+  
+  .review-wrap{
+     display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+  
+    background-color: #ffc5bf;
+    background-color: #ffd8be; 
+  
+  }
+
+  .review-wrap h5{
+    width:70%;
+    
+  }
+
+  .review-wrap h2{
+    width:50%;
+    
+  }
+
+  .review-list{
+      padding-left: 120px;
+ 
+     
+  }
+
+
+ 
+
+  .image-container{
+      position: relative;
+  }
+
+  .image-text{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color:#fff;
+    font-size:50px;
+    font-weight: 800;
+    width:50%;
+    height:20%;
+ 
+  }
+
+  .image{
+    /* background:url("https://fullsuitcase.com/wp-content/uploads/2020/06/Authentic-Italian-food-by-region.jpg") no-repeat center center/cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+ width:100vw;
+   border: 4px solid #000000;
+}
+
+.home-body{
+    border:3px solid;
+    margin:80px 100px;
+    width:100%;
+
+}
+
+.middle-section{
+  
+    width:100vw;
+    height:120vh;
+    margin-bottom: -20px;
+    padding-top:80px;
+    text-align: center; 
+}
+
+.middle-section h3 {
+    font-weight: 900;
+}
+
+.middle-section p {
+font-size: 20px;
+padding-top:20px;
+color:#000000;
+}
+
+.middle-image{
+    /* width:30vw; */
+    height:50vh;
+}
+
+.footer h3{
+    font-weight: 900;
+    padding-bottom: 20px;
+    
+}
+
+.footer{
+    /* background-color:#7da788; */
+    /* background-color:#a8c66c; */
+background-color: #000000;
+color:#fff;
+    width:100vw;
+    height:40vh;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+@media screen and (max-width: 996px) {
+    .navbar-light .navbar-nav .nav-link {
+        background-color:black;
+      margin-left:140px;
+    
+  
+       
+    }
+}
+
+@media screen and (max-width: 855px) {
+   
+
+    .title{
+        font-size: 25px;
+        margin-left:100px;
+        width:50%;
+    }
+
+    .middle-image{
+        width:30vw;
+        height:20vh;
+    }
+
+ 
+
+  }
+
+
+
+
+@media screen and (max-width: 450px) {
+    .image-text{
+        font-size:25px;
+        top:50%;
+    }
+
+    .navbar-light .navbar-brand{
+        font-size: 25px;
+       
+        width:50%;
+    }
+
+
+.middle-image{
+    width:50vw;
+    height:20vh;
+}
+
+
+
+  }
+
+
+  
+  .search-meal{
+      padding-top:200px;
+      text-align: center;
+      width:100vw;
+  }

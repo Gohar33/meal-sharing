@@ -14,12 +14,40 @@ router.get("/", async (request, response) => {
     };
 
     if ("availableReservations" in request.query) {
-      const availableReservations = Boolean(request.query.availableReservations)
-      const getReservations = await knex.from("meals").join('reservations', 'meals.id', '=', 'reservations.id').select("meals.title")
-        .where(("max_reservations" - "reservations.number_of_guests", true), availableReservations)
-      response.json(getReservations)
-      return;
+      let availableReservations =
+        request.query.availableReservations == "true";
+      if (availableReservations) {
+        filteredMeals = await knex("meals")
+        let availableMeal = await knex
+          .raw(
+            `
+    SELECT 
+    COALESCE(SUM(reservations.number_of_guests), 0) AS total_reservations,
+    meals.max_reservations,
+    meals.title,
+    meals.id
+FROM
+    meals
+        LEFT JOIN
+    reservations ON reservations.meal_id = meals.id
+GROUP BY meals.id
+HAVING max_reservations > total_reservations;
+    `
+          )
+          .then((res) => response.send(res[0]));
+        return;
+        response.json(availableMeal);
+
+      }
     }
+
+    // if ("availableReservations" in request.query) {
+    //   const availableReservations = Boolean(request.query.availableReservations)
+    //   const getReservations = await knex.from("meals").join('reservations', 'meals.id', '=', 'reservations.id').select("meals.title")
+    //     .where(("max_reservations" - "reservations.number_of_guests", true), availableReservations)
+    //   response.json(getReservations)
+    //   return;
+    // }
 
     if ("title" in request.query) {
       const matchTitle = request.query.title.toLocaleLowerCase()
@@ -40,13 +68,16 @@ router.get("/", async (request, response) => {
       const limitedNumber = await knex("meals").limit(numberOFMeals)
       response.json(limitedNumber)
       return;
+    } else {
+      const meals = await knex("meals")
+      response.json(meals);
     }
 
 
 
     // knex syntax for selecting things. Look up the documentation for knex for further info
-    const titles = await knex("meals").select("title");
-    response.json(titles);
+    // const titles = await knex("meals").select("title");
+    // response.json(titles);
   } catch (error) {
     throw error;
   }
