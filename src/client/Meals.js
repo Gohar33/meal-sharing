@@ -18,11 +18,6 @@ import SearchForMeal from './SearchForMeal.js';
 
 
 
-
-// const API = "http://localhost:5000/api/meals"
-
-
-
 const Meals = ({ meals, setMeals }) => {
 
     const [search, setSearch] = useState("")
@@ -33,9 +28,9 @@ const Meals = ({ meals, setMeals }) => {
         async function DataFetched() {
             let ApiUrl = "";
             if (search.length > 0) {
-                ApiUrl = `http://localhost:5000/api/meals?title=${search}`
+                ApiUrl = `/api/meals?title=${search}`
             } else {
-                ApiUrl = "http://localhost:5000/api/meals"
+                ApiUrl = "/api/meals"
             }
 
             const fetchdata = await fetch(ApiUrl)

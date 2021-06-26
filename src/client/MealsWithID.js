@@ -6,7 +6,7 @@ import ShowReservations from './ShowReservations.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './MealsWithID.css'
 
-const API = "http://localhost:5000/api/meals"
+const API = "/api/meals"
 
 
 const MealsWithId = ({ meals, setMeals }) => {
@@ -31,7 +31,7 @@ const MealsWithId = ({ meals, setMeals }) => {
     }
     console.log(meal.title)
     console.log(meal.id)
-    let fileName = `./public/${meal.id}.png`;
+    let fileName = `/public/${meal.id}.png`;
     return (
         <div className="show-reservation-wrapper" >
             <div className="mealsWithId-form">

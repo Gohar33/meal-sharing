@@ -37,3 +37,23 @@
     color:black; 
     border:black 1px solid;
 }
+
+.search-input{
+    background-color: #E8CED8;
+    padding-top:50px;
+    font-size:25px;
+    margin:-100px 0;
+
+}
+
+.search-input input{
+    border-radius: 10px;
+    text-align: center;
+color:rgb(126, 119, 119);
+border: 0;
+  border-bottom: 5px solid rgb(126, 119, 119);
+  outline: 0;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
