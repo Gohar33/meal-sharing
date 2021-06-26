@@ -11,7 +11,7 @@ const ShowReservations = (props) => {
 
 
 
-    const AvailableMealsAPI = "http://localhost:3000/api/meals?availableReservations=true"
+    const AvailableMealsAPI = "/api/meals?availableReservations=true"
 
     useEffect(() => {
         async function AvailableMeals() {
