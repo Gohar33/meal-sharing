@@ -1,16 +1,15 @@
 .navBar {
     width:100vw;
-    background-color: black;
+    background-color: #000000;
     z-index: 1;
     height:15%;
-  
 }
 
 .navbar-light .navbar-brand {
     color:#fff;
     font-family: fantasy;
     font-size:50px;
-    padding-left:30px; 
+    padding-left:40px; 
 }
 
 .navbar-light .navbar-brand:hover {
@@ -20,6 +19,7 @@
 .navbar-light .navbar-nav .nav-link {
     color:#fff;
     font-size:25px;  
+    margin:10px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
@@ -46,15 +46,14 @@
 
 
 .toggle{
-    background-color:white !important;
+    background-color:#fff !important;
   }
 
 
 
   @media screen and (max-width: 996px) {
     .navbar-light .navbar-nav .nav-link {
-        background-color:black;
-      /* margin-left:140px;     */
+        background-color:#000000;
     }
 }
 
@@ -63,7 +62,6 @@
 
     .navbar-light .navbar-brand{
         font-size: 25px;
-        /* width:50%; */
     }
 
   }

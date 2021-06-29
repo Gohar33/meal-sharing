@@ -9,8 +9,6 @@ const ShowReservations = (props) => {
     const [reservation, setReservation] = useState([])
     console.log(reservation)
 
-
-
     const AvailableMealsAPI = "/api/meals?availableReservations=true"
 
     useEffect(() => {
@@ -45,10 +43,7 @@ const ShowReservations = (props) => {
     return (
         <div>
             {show === false && <h1 className="reject-text">Sorry no reservations available</h1>}
-
             {show && <ReservationForms mealId={props.mealId} />}
-
-
         </div>
     )
 }

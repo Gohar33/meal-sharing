@@ -1,10 +1,8 @@
 import React from 'react'
-
-
 import MiddleSection from './MiddleSection.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './NavBar.js'
 import Footer from './Footer.js'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css'
 
 const Home = () => {
@@ -17,12 +15,8 @@ const Home = () => {
             </div>
             <MiddleSection />
             <Footer />
-
-
         </div >
-
     )
-
 }
 
 export default Home

@@ -1,22 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import NavBar from './NavBar.js'
-import './Home.css'
-import images from './images.js'
-
-
-import {
-    BrowserRouter as
-        Switch,
-    Route,
-    Link,
-    useRouteMatch
-} from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import { BrowserRouter as Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import MealsWithID from './MealsWithID';
 import SearchForMeal from './SearchForMeal.js';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavBar from './NavBar.js'
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+
+import images from './images.js'
+import './Home.css'
 
 
 const Meals = ({ meals, setMeals }) => {
@@ -68,11 +61,9 @@ const Meals = ({ meals, setMeals }) => {
                             </Card.Body>
                         </Card>
                     </div>
-
+                })
                 }
-                )
 
-                }
                 < Switch >
                     <Route path={`${path}/:id`}>
                         <MealsWithID meals={meals} />

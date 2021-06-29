@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './MealsWithID.css'
 
@@ -29,7 +30,7 @@ const ReservationForms = (props) => {
 
     function postNewMeal() {
         (async () => {
-            await fetch('http://localhost:5000/api/reservations', {
+            await fetch('/api/reservations', {
                 method: 'POST',
                 mode: 'cors',
                 headers: {
@@ -49,8 +50,6 @@ const ReservationForms = (props) => {
 
     return (
         <div className="form-wrapper">
-
-
 
             <Form className="form">
 
@@ -82,12 +81,10 @@ const ReservationForms = (props) => {
                     <Form.Control type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter email" />
                     <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
-</Form.Text>
+                    </Form.Text>
                 </Form.Group>
 
                 <Button className="form-button" variant="primary" type="submit" onClick={onSubmit}> Submit </Button>
-
-
             </Form>
 
             <Link className="back" to="/meals">Go back</Link>

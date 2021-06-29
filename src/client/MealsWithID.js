@@ -1,16 +1,14 @@
 import React, { useEffect } from 'react'
 import { useParams } from "react-router-dom";
-
 import ShowReservations from './ShowReservations.js'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import images from './images.js'
 import './MealsWithID.css'
 
 const API = "/api/meals"
 
 
 const MealsWithId = ({ meals, setMeals }) => {
-
 
     useEffect(() => {
         async function DataFetched() {
@@ -20,7 +18,6 @@ const MealsWithId = ({ meals, setMeals }) => {
         }
 
         DataFetched()
-
     }, [])
 
     const params = useParams()
@@ -31,11 +28,11 @@ const MealsWithId = ({ meals, setMeals }) => {
     }
     console.log(meal.title)
     console.log(meal.id)
-    let fileName = `/public/${meal.id}.png`;
+    const mealImages = images.find((img) => img.id === meal.id)
     return (
         <div className="show-reservation-wrapper" >
             <div className="mealsWithId-form">
-                <img src={fileName} className="meal-image" />
+                <img src={mealImages.img} className="meal-image" />
                 <h1>{meal.title} </h1>
                 <h3>{meal.description}</h3>
                 <h3>Location: {meal.location}</h3>
@@ -43,9 +40,7 @@ const MealsWithId = ({ meals, setMeals }) => {
             </div>
             <ShowReservations mealId={meal.id} />
         </div>
-
     )
-
 }
 
 export default MealsWithId
