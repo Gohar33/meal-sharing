@@ -33,7 +33,6 @@ const ReviewSection = () => {
                     return (
                         <div className="review-list" key={review.id}>
                             <img src={mealImages.img} className="meal-image" />
-
                             <h2>{review.title}</h2>
                             <h5>{review.description}</h5>
 
