@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import NavBar from './NavBar.js'
 import './Home.css'
+import images from './images.js'
 
 
 import {
@@ -51,11 +52,12 @@ const Meals = ({ meals, setMeals }) => {
             <div className="card-wrap">
 
                 {meals.map((meal) => {
-                    let fileName = `/public/${meal.id}.png`;
+                    const mealImages = images.find((img) => img.id === meal.id)
+                    // let fileName = `/public/${meal.id}.png`;
                     return <div key={meal.id}>
                         < Card style={{ width: '18rem' }} className="meals-order" >
-
-                            <Card.Img variant="top" src={fileName} className="meal-image" />
+                            <Card.Img variant="top" src={mealImages.img} className="meal-image" />
+                            {/* <Card.Img variant="top" src={fileName} className="meal-image" /> */}
                             <Card.Body >
                                 <Card.Title>{meal.title} </Card.Title>
                                 <Card.Text>{meal.description} </Card.Text>

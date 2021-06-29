@@ -3,6 +3,7 @@ import StarRatingComponent from 'react-star-rating-component'
 // import Rating from 'react-simple-star-rating';
 import NavBar from './NavBar.js'
 import './Home.css'
+import images from './images.js'
 
 const API = "/api/reviews";
 
@@ -31,10 +32,12 @@ const ReviewSection = () => {
             <div className="review-wrap">
 
                 {reviews.map((review) => {
-                    let fileName = `/public/${review.id}.png`;
+                    const mealImages = images.find((img) => img.id === review.id)
+                    // let fileName = `/public/${review.id}.png`;
                     return (
                         <div className="review-list" key={review.id}>
-                            <img src={fileName} className="meal-image" />
+                            <img src={mealImages.img} className="meal-image" />
+                            {/* <img src={fileName} className="meal-image" /> */}
                             <h2>{review.title}</h2>
                             <h5>{review.description}</h5>
 
