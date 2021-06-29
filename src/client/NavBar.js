@@ -1,30 +1,19 @@
 import React from 'react'
-
-// import { faWineGlassAlt } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Home.css'
+import './NavBar.css'
 
 const NavBar = () => {
     return (
         <div>
-            <Navbar expand="lg" className="navBar">
-                {/* <div > */}
-                {/* <FontAwesomeIcon icon={faWineGlassAlt} size="2x" transform="down-4 right-26" /> */}
-                {/* <div>
-                    <h1 className="title">Meal Sharing</h1>
-                </div> */}
-
+            <Navbar collapseOnSelect expand="lg" fixed="top" className="navBar">
                 <Navbar.Brand >Meal-Sharing</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggle" />
-                <Navbar.Collapse id="basic-navbar-nav" >
-                    <Nav className="flexElements"
-                        activeKey="/home">
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" className="toggle" />
+                <Navbar.Collapse id="responsive-navbar-nav" >
+                    <Nav className="justify-content-end w-100" activeKey="/home">
 
-                        <Nav.Item className="nav-items">
+                        <Nav.Item>
                             <Nav.Link href="/">Home</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
