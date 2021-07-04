@@ -19,7 +19,7 @@
 .navbar-light .navbar-nav .nav-link {
     color:#fff;
     font-size:25px;  
-    margin:10px;
+    padding:20px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {

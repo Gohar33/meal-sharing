@@ -7,7 +7,6 @@ body {
     margin: 0 auto; 
     font-family:'Roboto', sans-serif;
     line-height:1.4;
-    background-color: #ffd8be; 
 }
  
 .review-wrap {
@@ -16,12 +15,16 @@ body {
     column-gap: 10px;
     row-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    background-color: #ffd8be; 
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     padding-top:200px;
+   
     /* background-color: #ffc5bf; */
    
   }
+
+ 
 
   .review-list {
    padding-left: 150px;
@@ -117,6 +120,14 @@ color:#000000;
         margin-left:100px;
         width:50%;
     }
+    .review-wrap{
+        height:250vh;
+        
+    }
+
+    .review-list {
+        padding-left: 50px;
+     }
 
     .middle-image{
         width:30vw;
@@ -132,6 +143,8 @@ color:#000000;
         font-size:25px;
         top:50%;
 }
+
+
 
 .middle-image{
     width:50vw;

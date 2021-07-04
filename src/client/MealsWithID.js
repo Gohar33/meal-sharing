@@ -21,7 +21,7 @@ const MealsWithId = ({ meals, setMeals }) => {
     }, [])
 
     const params = useParams()
-    console.log(meals)
+
     const meal = meals.find((meal) => meal.id == Number(params.id))
     if (meal === undefined) {
         return null
