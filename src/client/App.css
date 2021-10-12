@@ -1,3 +1,59 @@
 * {
     box-sizing: border-box;
 }
+
+
+.meals-order{
+    padding:1rem;
+    width:30rem;
+    box-shadow:  10px 5px 5px rgba(6,7,9, 0.6);
+    border-radius: 10px;
+} 
+
+.meal-image{
+    width:250px;
+    height:150px;
+}
+
+.card-wrap{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:20px;
+    width:100vw;
+    background-color: #E8CED8;
+   padding:30px;
+   padding-top:150px;
+}
+
+.card-button{
+    background-color:black;
+    border:black 1px solid;
+}
+
+.card-button:hover{
+    background-color:#E8CED8;
+    color:black; 
+    border:black 1px solid;
+}
+
+.search-input{
+    background-color: #E8CED8;
+    padding-top:50px;
+    font-size:25px;
+    margin:-100px 0;
+
+}
+
+.search-input input{
+    border-radius: 10px;
+    text-align: center;
+color:rgb(126, 119, 119);
+border: 0;
+  border-bottom: 5px solid rgb(126, 119, 119);
+  outline: 0;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}

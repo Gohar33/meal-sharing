@@ -1,19 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './Home';
+import Meals from './Meals';
+import MealsWithID from './MealsWithID'
+import ReviewSection from './ReviewSection'
+
+import "./App.css"
+
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import TestComponent from "./components/TestComponent/TestComponent";
+
+
+
+
 
 function App() {
+  const [meals, setMeals] = useState([]);
+  const [reviews, setReviews] = useState([])
+
   return (
+
     <Router>
-      <Route exact path="/">
-        <p>test</p>
-      </Route>
-      <Route exact path="/lol">
-        <p>lol</p>
-      </Route>
-      <Route exact path="/test-component">
-        <TestComponent></TestComponent>
-      </Route>
+
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+
+        <Route exact path="/meals">
+          <Meals meals={meals} setMeals={setMeals} />
+        </Route>
+
+        <Route exact path="/meals/:id">
+          <MealsWithID meals={meals} setMeals={setMeals} />
+        </Route>
+
+        <Route exact path="/reviews">
+          <ReviewSection reviews={reviews} setReviews={setReviews} />
+        </Route>
+      </Switch>
     </Router>
   );
 }
