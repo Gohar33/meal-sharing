@@ -85,4 +85,7 @@ The api can now be found on `http://localhost:3000/api/` an example is `http://l
 https://user-images.githubusercontent.com/63416409/152322202-04219d85-c0dd-4fe5-809f-3293bd1eed03.mov
 
 
+<img width="1433" alt="Screenshot 2022-03-18 at 18 52 29" src="https://user-images.githubusercontent.com/63416409/159057037-1620a7a1-f9da-4a2c-a907-087593d3b0bb.png">
+
+
 
