@@ -12,7 +12,7 @@
     "server": "nodemon ./src/backend/server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Benjamin Hughes",
   "license": "MIT",
